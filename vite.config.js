@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/globalWellness/', // Replace with the name of your GitHub repo
+  base: '/global/', // Replace with the name of your GitHub repo
 })

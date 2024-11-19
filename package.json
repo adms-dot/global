@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "homepage": "https://adms-dot/github.io/globalWellness",
+  "homepage": "https://adms-dot/github.io/global",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
