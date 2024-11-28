@@ -16,7 +16,7 @@ function About() {
           <img className="h-32 lg:h-96 " src={image1} alt="" />
           <div className='h-32 border py-2 px-4 border-zinc-300 lg:h-80 rounded-lg w-80 lg:w-2/3 bg-zinc-100'>
           <h1>Vision & Mission</h1>
-          <p className='text-[7px] text-justify'>Dr. Priyanka Kalra, a distinguished Consultant Psychiatrist and a member of the Indian Association of Child and Adolescent Psychiatry, founded a center with a clear vision to provide a dedicated platform for children, adolescents, and parents. The mission is to reach out to every child who needs help, offering a sanctuary for consultations on various issues or challenges faced in daily life.</p>
+          <p className='text-[8px] text-justify'>Dr. Priyanka Kalra, a distinguished Consultant Psychiatrist and a member of the Indian Association of Child and Adolescent Psychiatry, founded a center with a clear vision to provide a dedicated platform for children, adolescents, and parents. The mission is to reach out to every child who needs help, offering a sanctuary for consultations on various issues or challenges faced in daily life.</p>
           
           
           </div>
