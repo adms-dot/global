@@ -11,7 +11,7 @@ export default {
       },
       backgroundImage:{
         'program':"url('./program-bg.jpg')",
-        'hero':"url('home-hero.png')",
+        'hero':"url('./src/assets/home-hero.png')",
 
       }
     },
