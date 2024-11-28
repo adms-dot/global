@@ -92,47 +92,37 @@ function Home() {
 
 
   return (
-    <div className="flex pt-20 overflow-hidden flex-col">
-     
-      <div className="z-10 px-16 py-28 mt-0 w-full bg-white max-md:px-5 max-md:pb-24 max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col">
-          <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-            <img
-              loading="lazy"
-              
-              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b5c5d5a614dd6b0571966849fc339509d6e37c3b875afbee58908be67620a448?placeholderIfAbsent=true&apiKey=62758e6c51124168b752b9b25726be22&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5c5d5a614dd6b0571966849fc339509d6e37c3b875afbee58908be67620a448?placeholderIfAbsent=true&apiKey=62758e6c51124168b752b9b25726be22&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5c5d5a614dd6b0571966849fc339509d6e37c3b875afbee58908be67620a448?placeholderIfAbsent=true&apiKey=62758e6c51124168b752b9b25726be22&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5c5d5a614dd6b0571966849fc339509d6e37c3b875afbee58908be67620a448?placeholderIfAbsent=true&apiKey=62758e6c51124168b752b9b25726be22&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5c5d5a614dd6b0571966849fc339509d6e37c3b875afbee58908be67620a448?placeholderIfAbsent=true&apiKey=62758e6c51124168b752b9b25726be22&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5c5d5a614dd6b0571966849fc339509d6e37c3b875afbee58908be67620a448?placeholderIfAbsent=true&apiKey=62758e6c51124168b752b9b25726be22&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5c5d5a614dd6b0571966849fc339509d6e37c3b875afbee58908be67620a448?placeholderIfAbsent=true&apiKey=62758e6c51124168b752b9b25726be22&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5c5d5a614dd6b0571966849fc339509d6e37c3b875afbee58908be67620a448?placeholderIfAbsent=true&apiKey=62758e6c51124168b752b9b25726be22"
-              className="object-contain grow self-center w-full aspect-[1.33] max-w-[851px] max-md:mt-10 max-md:max-w-full max-sm:-mt-1 max-sm:w-[361px]"
-            />
-          </div>
-          <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col items-start   my-auto mr-0 font-medium max-md:mt-10 max-md:max-w-full">
-              <div className=" text-8xl  text-black max-md:max-w-full max-md:text-4xl max-sm:text-7xl max-sm:text-center max-sm:text-green-600">
-                <span className="font-bold tracking-tight text-zinc-800">Nurturing</span>{" "}
-                <span class="text-transparent tracking-tight font-bold bg-clip-text bg-gradient-to-r from-green-400 to-green-800">
-  Growth
-</span>
-              </div>
-              <div className="mt-4 text-2xl text-center text-zinc-500 max-md:mt-10 max-md:max-w-full">
-                Holistic child wellness programs designed for a brighter future
-              </div>
-              <div className="flex justify-center max-sm:w-full">
+    <div className="flex  pt-16 overflow-hidden flex-col">
+     <div className="h-screen">
 
-        <a href="javascript:void(0)" onClick={scrollToVideoSection}>
-          <div className="py-2 mt-4  text-white -mr-px text-2xl hover:bg-blue-700 bg-gradient-to-r from-[#608DFF] to-[#042066] font-medium text-center h-[55px] rounded-2xl w-[300px] max-md:px-5 max-md:max-w-full max-sm:mx-auto max-sm:mb-2.5 max-sm:text-2xl max-sm:bg-blue-600 max-sm:h-[60px] max-sm:w-[310px]">
-            <h3>Watch How We Care</h3>
+      <div className="bg-hero flex flex-col lg:pt-32 text-center items-center pt-32    mt-20 bg-cover bg-center h-5/6">
+
+        <h1 className="text-5xl lg:text-8xl font-bold">Nurturing <span className="text-white">Growth</span></h1>
+        <h1 className="text-3xl lg:text-4xl pt-4">One Step at a Time</h1>
+        <div className="h-14 w-2/3 lg:w-1/2 flex justify-center items-center mt-10 bg-opacity-50 rounded-xl backdrop-blur-lg bg-zinc-100">
+        <h3 className="text-zinc-700 text-sm text-center lg:text-xl">Holistic child wellness programs designed for a brighter future</h3>
+        </div>
+
+        <div className="flex flex-col gap-10 items-center pt-10  lg:flex-row">
+          <div className="h-10 w-60 flex justify-center items-center text-white font-semibold bg-sky-500 rounded-lg">
+            <h2 className="text-xl">Watch How we Care</h2>
           </div>
-        </a>
-              </div>
-     
-            </div>
+          <div className="h-10 flex justify-center items-center border border-zinc-400 w-60 bg-zinc-100 bg-opacity-50 backdrop-blur-lg rounded-lg ">
+            <h2 className="font-semibold text-2xl text-black">Contact Us</h2>
           </div>
         </div>
+
+     </div>
       </div>
+
+
+
+
       <div className="flex flex-col items-center self-center mt-24 w-full max-w-[1796px] max-md:mt-10 max-md:max-w-full">
         <div className="self-center text-4xl font-semibold text-center text-zinc-800 max-md:max-w-full max-md:text-3xl">
           <p>Welcome to</p>
         </div>
-        <div className="self-center bg-gradient-to-r from-green-400 to-green-900 text-transparent bg-clip-text px-2 mt-2 text-8xl font-bold tracking-tight text-center max-md:max-w-full max-md:text-5xl">
+        <div className="self-center bg-gradient-to-r from-[#39B7F9] via-[#7260FC] to-[#AB09FF] text-transparent bg-clip-text px-2 mt-2 text-8xl font-bold tracking-tight text-center max-md:max-w-full max-md:text-5xl">
           Global Child Wellness Centre
         </div>
         <div className="mt-6 text-2xl max-md:mx-4 max-md:text-xl text-center text-zinc-500 max-md:max-w-full">

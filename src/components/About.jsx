@@ -7,10 +7,10 @@ import image3 from "../assets/about3.png"
 
 function About() {
   return (
-    <div className='pt-36  flex flex-col items-center lg:py-44 px-10 lg:px-20'>
+    <div className='pt-36  flex flex-col items-center lg:py-40 px-10 lg:px-20'>
         
         
-        <h2 className='text-6xl text-center font-extrabold'>About <span className='bg-gradient-to-br from-green-500 to-green-800 bg-clip-text text-transparent'>Us</span></h2>
+        <h2 className='text-5xl lg:text-6xl text-center font-extrabold'>About <span className='bg-gradient-to-br from-green-500 to-green-800 bg-clip-text text-transparent'>Us</span></h2>
         <h3 className='text-center text-xl lg:text-2xl text-zinc-700 pt-4'>A Team dedicated to your Child's Happiness</h3>
         <img className='pt-6 lg:pt-10 '  src={hero} alt="Team_image" />
 

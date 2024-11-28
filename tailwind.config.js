@@ -10,7 +10,9 @@ export default {
         helvetica: ['HelveticaCustom', 'sans-serif'], // Adding custom font
       },
       backgroundImage:{
-        'program':"url('./program-bg.jpg')"
+        'program':"url('./program-bg.jpg')",
+        'hero':"url('./home-hero.png')",
+
       }
     },
   },
