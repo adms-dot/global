@@ -7,7 +7,7 @@ import { IoPhonePortrait } from 'react-icons/io5';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-700 text-white py-6">
+    <footer className="bg-blue-700 mt-20 text-white py-6">
       <div className="container mx-auto px-4">
         {/* Footer Top: Contact Info & Social Media */}
         <div className="flex flex-wrap justify-between gap-6 mb-6 flex-col md:flex-row">
