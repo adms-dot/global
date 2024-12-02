@@ -99,16 +99,16 @@ function Home() {
 
         <h1 className="text-5xl lg:text-8xl font-bold">Nurturing <span className="text-white">Growth</span></h1>
         <h1 className="text-3xl lg:text-4xl pt-4">One Step at a Time</h1>
-        <div className="h-14 w-2/3 lg:w-1/2 flex justify-center items-center mt-10 bg-opacity-50 rounded-xl backdrop-blur-lg bg-zinc-100">
-        <h3 className="text-zinc-700 text-sm text-center lg:text-xl">Holistic child wellness programs designed for a brighter future</h3>
+        <div className="h-14 w-2/3 lg:w-1/2 flex justify-center items-center mt-10  rounded-xl  bg-white">
+        <h3 className="text-blue-500 text-sm text-center lg:text-xl">Holistic child wellness programs designed for a brighter future</h3>
         </div>
 
         <div className="flex flex-col gap-10 items-center pt-10  lg:flex-row">
-          <div className="h-10 w-60 flex justify-center items-center text-white font-semibold bg-sky-500 rounded-lg">
+          <div className="h-10 w-60 flex justify-center items-center text-white font-semibold bg-blue-500 rounded-lg">
             <h2 className="text-xl">Watch How we Care</h2>
           </div>
-          <div className="h-10 flex justify-center items-center border border-zinc-400 w-60 bg-zinc-100 bg-opacity-50 backdrop-blur-lg rounded-lg ">
-            <h2 className="font-semibold text-2xl text-black">Contact Us</h2>
+          <div className="h-10 flex justify-center items-center border  w-60 bg-white rounded-lg ">
+            <h2 className="font-semibold text-2xl text-blue-500">Contact Us</h2>
           </div>
         </div>
 
@@ -122,7 +122,7 @@ function Home() {
         <div className="self-center text-4xl font-semibold text-center text-zinc-800 max-md:max-w-full max-md:text-3xl">
           <p>Welcome to</p>
         </div>
-        <div className="self-center bg-gradient-to-r from-[#39B7F9] via-[#7260FC] to-[#AB09FF] text-transparent bg-clip-text px-2 mt-2 text-8xl font-bold tracking-tight text-center max-md:max-w-full max-md:text-5xl">
+        <div className="self-center text-blue-500 px-2 mt-2 text-8xl font-bold tracking-tight text-center max-md:max-w-full max-md:text-5xl">
           Global Child Wellness Centre
         </div>
         <div className="mt-6 text-2xl max-md:mx-4 max-md:text-xl text-center text-zinc-500 max-md:max-w-full">
@@ -143,7 +143,7 @@ function Home() {
                 </div>
                 {/* <div className="flex flex-col pb-3.5 mt-14 max-w-full text-white rounded-3xl h-[75px] bg-blue-400 bg-opacity-40 w-[350px] max-md:mt-10 max-sm:mx-auto max-sm:bg-blue-400 max-sm:h-[73px]"> */}
         <a href="javascript:void(0)" onClick={scrollToProgramSection}>
-          <div className="px-8 py-4 mt-10 text-white -mr-px text-2xl hover:bg-blue-700  bg-gradient-to-r from-[#608DFF] to-[#042066] font-medium text-center h-[70px] rounded-2xl w-[350px] max-md:px-5 max-md:max-w-full max-sm:mx-auto max-sm:mb-2.5 max-sm:text-2xl max-sm:bg-blue-600 max-sm:h-[60px] max-sm:w-[310px]">
+          <div className="px-8 py-4 mt-10 text-white -mr-px text-2xl hover:bg-blue-700 bg-blue-500 font-medium text-center h-[70px] rounded-2xl w-[350px] max-md:px-5 max-md:max-w-full max-sm:mx-auto max-sm:mb-2.5 max-sm:text-2xl max-sm:bg-blue-500 max-sm:h-[60px] max-sm:w-[310px]">
             <h3>Explore Our Programs</h3>
           </div>
         </a>

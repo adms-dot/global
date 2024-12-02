@@ -1,131 +1,141 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaBars, FaTimes } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import { IoCall } from 'react-icons/io5';
-import { IoPhonePortrait } from 'react-icons/io5';
+import { IoCall, IoPhonePortrait } from 'react-icons/io5';
 
 const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
   return (
-    <div className="flex fixed z-50 overflow-hidden flex-col pb-6 w-full text-xl font-medium bg-white max-md:max-w-full">
-      <div className="flex flex-wrap gap-5 h-16 items-center justify-between pl-20 w-full text-white bg-blue-700 max-md:pl-5 max-md:max-w-full max-sm:flex max-sm:flex-row max-sm:mx-auto max-sm:h-[49.5px] max-sm:w-[101%]">
-        <div className="flex flex-wrap gap-10 my-auto max-md:max-w-full max-sm:flex max-sm:flex-row max-sm:mx-auto max-sm:w-[723px]">
-          <div className="basis-auto max-sm:mr-auto max-sm:text-base">
-            <a
-              href="tel:+919501032237"
-              className="flex items-center hover:text-green-600 hover:underline transition-all duration-300"
-            >
-              <IoCall className="mr-2" />
-              +91 95010 32237
-            </a>
-          </div>
-          <div className="basis-auto">
-            <a
-              href="mailto:gcwcentre@gmail.com"
-              className="flex items-center hover:text-green-600 hover:underline transition-all duration-300"
-            >
-              <MdEmail className="mr-2" />
-              gcwcentre@gmail.com
-            </a>
-          </div>
-          <div className="basis-auto max-sm:mx-auto max-sm:text-base max-sm:text-center">
-            <a
-              href="tel:01814100804"
-              className="flex items-center hover:text-green-600 hover:underline transition-all duration-300"
-            >
-              <IoPhonePortrait className="mr-2" />
-              01814100804
-            </a>
-          </div>
+    <div className="fixed z-50 w-full text-xl font-medium bg-white shadow-lg">
+      {/* Top Contact Bar */}
+      <div className="hidden md:flex flex-wrap items-center justify-between px-6 py-3 bg-blue-600 text-white">
+        <div className="flex gap-10">
+          <a href="tel:+919501032237" className="flex items-center hover:text-zinc-300 transition-all duration-300">
+            <IoCall className="mr-2" />
+            +91 95010 32237
+          </a>
+          <a href="mailto:gcwcentre@gmail.com" className="flex items-center hover:text-zinc-300 transition-all duration-300">
+            <MdEmail className="mr-2" />
+            gcwcentre@gmail.com
+          </a>
+          <a href="tel:01814100804" className="flex items-center hover:text-zinc-300 transition-all duration-300">
+            <IoPhonePortrait className="mr-2" />
+            01814100804
+          </a>
         </div>
-        <div className="flex gap-3 px-6 py-4 h-16 bg-green-600 max-md:px-5 max-sm:hidden max-sm:pl-16 max-sm:mx-auto">
-          <div className="flex-auto">
-            <a
-              href="https://maps.app.goo.gl/9wrYK7u3tLfTFJeg8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center hover:text-blue-600 hover:underline transition-all duration-300"
-            >
-              <FaMapMarkerAlt className="mr-2" />
-              127 I-Block, Sarabha Nagar, Ludhiana
-            </a>
-          </div>
-        </div>
+        <a href="https://maps.app.goo.gl/9wrYK7u3tLfTFJeg8" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-zinc-300 transition-all duration-300">
+          <FaMapMarkerAlt className="mr-2" />
+          127 I-Block, Sarabha Nagar, Ludhiana
+        </a>
       </div>
 
-      <div className="flex px-16 h-10 flex-wrap gap-5 justify-between self-center mt-6 w-full text-sky-900 max-w-[1670px] max-md:max-w-full">
+      {/* Navbar */}
+      <div className="relative flex items-center justify-between px-6 py-4">
         <a href="/">
           <img
-            loading="lazy"
-            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/8e4dce1e421474c148d18c0bb83f0ff210294e3f893e14ebcb53d6565c68eb70?placeholderIfAbsent=true&apiKey=62758e6c51124168b752b9b25726be22"
-            className="object-contain shrink-0 max-w-full aspect-[3.85] w-[230px] max-sm:mx-auto max-sm:w-[160px]"
+            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/8e4dce1e421474c148d18c0bb83f0ff210294e3f893e14ebcb53d6565c68eb70"
+            className="w-[230px] max-sm:w-[160px]"
             alt="Logo"
           />
         </a>
 
-        <div className="flex flex-wrap gap-10 my-auto max-md:max-w-full max-sm:hidden max-sm:mr-0">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive
-                ? 'text-blue-600 font-semibold hover:text-blue-700 transition-all duration-300'
-                : 'text-sky-900 hover:text-blue-600 transition-all duration-300'
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive
-                ? 'text-blue-600 font-semibold hover:text-blue-700 transition-all duration-300'
-                : 'text-sky-900 hover:text-blue-600 transition-all duration-300'
-            }
-          >
-            About Us
-          </NavLink>
-          <NavLink
-            to="/facilities"
-            className={({ isActive }) =>
-              isActive
-                ? 'text-blue-600 font-semibold hover:text-blue-700 transition-all duration-300'
-                : 'text-sky-900 hover:text-blue-600 transition-all duration-300'
-            }
-          >
-            Facilities
-          </NavLink>
-          <NavLink
-            to="/services"
-            className={({ isActive }) =>
-              isActive
-                ? 'text-blue-600 font-semibold hover:text-blue-700 transition-all duration-300'
-                : 'text-sky-900 hover:text-blue-600 transition-all duration-300'
-            }
-          >
-            Services
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive
-                ? 'text-blue-600 font-semibold hover:text-blue-700 transition-all duration-300'
-                : 'text-sky-900 hover:text-blue-600 transition-all duration-300'
-            }
-          >
-            Contact
-          </NavLink>
-          <NavLink
-            to="/branches"
-            className={({ isActive }) =>
-              isActive
-                ? 'text-blue-600 font-semibold hover:text-blue-700 transition-all duration-300'
-                : 'text-sky-900 hover:text-blue-600 transition-all duration-300'
-            }
-          >
-            Our Branches
-          </NavLink>
-        </div>
+        {/* Desktop Links */}
+        <nav className="hidden md:flex gap-10">
+          <NavLink to="/" className="hover:text-blue-600">Home</NavLink>
+          <NavLink to="/about" className="hover:text-blue-600">About Us</NavLink>
+          <div className="group relative">
+            <NavLink  className="hover:text-blue-600">Facilities</NavLink>
+            <div className="absolute left-0 hidden  bg-white shadow-lg group-hover:block">
+              <NavLink to="/Counselling" className="block px-4 py-2 border hover:bg-blue-100">Counselling</NavLink>
+              <NavLink to="/Autism" className="block px-4 py-2 border hover:bg-blue-100">Autism</NavLink>
+              <NavLink to="/Adhd" className="block px-4 py-2 border hover:bg-blue-100">ADHD</NavLink>
+              <NavLink to="/Anger" className="block px-4 py-2 border hover:bg-blue-100">Anger Management</NavLink>
+              <NavLink to="/learning" className="block px-4 py-2 border hover:bg-blue-100">Learning Difficulties</NavLink>
+              <NavLink to="/behaviour" className="block px-4 py-2 border hover:bg-blue-100">Behaviour Problems</NavLink>
+              <NavLink to="/speech" className="block px-4 py-2 border hover:bg-blue-100">Speech Therapy</NavLink>
+              <NavLink to="/internet" className="block px-4 py-2 border hover:bg-blue-100">Internet & Gaming</NavLink>
+              <NavLink to="/school" className="block px-4 py-2 border hover:bg-blue-100">School Refusal</NavLink>
+              <NavLink to="/communication" className="block px-4 py-2 border hover:bg-blue-100">Communication Difficulty</NavLink>
+              <NavLink to="/exam" className="block px-4 py-2 border hover:bg-blue-100">Exam Stress</NavLink>
+              <NavLink to="/ocd" className="block px-4 py-2 border hover:bg-blue-100">OCD</NavLink>
+            </div>
+          </div>
+          <div className="group relative">
+            <NavLink  className="hover:text-blue-600">Services</NavLink>
+            <div className="absolute left-0 hidden  bg-white shadow-lg group-hover:block">
+              <NavLink to="/pediatric" className="block px-4 py-2 border hover:bg-blue-100">Pediatric Physiotherapy</NavLink>
+              <NavLink to="/psychological" className="block px-4 py-2 border hover:bg-blue-100">Psychological Assessment</NavLink>
+              <NavLink to="/early" className="block px-4 py-2 border hover:bg-blue-100">Early Intervention Program</NavLink>
+              <NavLink to="/art" className="block px-4 py-2 border hover:bg-blue-100">Art Therapy</NavLink>
+              <NavLink to="/special" className="block px-4 py-2 border hover:bg-blue-100">Special Education</NavLink>
+              <NavLink to="/parenting" className="block px-4 py-2 border hover:bg-blue-100">Parenting</NavLink>
+              <NavLink to="/nri" className="block px-4 py-2 border hover:bg-blue-100">Nri Services</NavLink>
+              <NavLink to="/station" className="block px-4 py-2 border hover:bg-blue-100">Out Station Services</NavLink>
+              <NavLink to="/stammering" className="block px-4 py-2 border hover:bg-blue-100">Stammering Therapy</NavLink>
+              <NavLink to="/online" className="block px-4 py-2 border hover:bg-blue-100">Online Counselling</NavLink>
+            </div>
+          </div>
+          <NavLink to="/contact" className="hover:text-blue-600">Contact</NavLink>
+          <div className="group relative">
+            <NavLink to="/branches" className="hover:text-blue-600">Our Branches</NavLink>
+            <div className="absolute left-0 hidden bg-white shadow-lg group-hover:block">
+              <NavLink to="/moga" className="block px-4 py-2 hover:bg-blue-100">Moga</NavLink>
+              <NavLink to="/bathinda" className="block px-4 py-2 hover:bg-blue-100">Bathinda</NavLink>
+              <NavLink to="/faridkot" className="block px-4 py-2 hover:bg-blue-100">Faridkot</NavLink>
+            </div>
+          </div>
+        </nav>
+
+        {/* Mobile Hamburger Icon */}
+        <button onClick={toggleMobileMenu} className="text-2xl md:hidden">
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <nav className="md:hidden bg-white text-sm shadow-lg">
+          <NavLink to="/" className="block px-4 py-2 hover:bg-blue-100">Home</NavLink>
+          <NavLink to="/about" className="block px-4 py-2 hover:bg-blue-100">About Us</NavLink>
+          <div className="group">
+            <NavLink to="/facilities" className="block px-4 py-2 hover:bg-blue-100">Facilities</NavLink>
+            <div className="pl-6 text-sm">
+            <NavLink to="/Counselling" className="block px-4 py-2 border hover:bg-blue-100">Counselling</NavLink>
+              <NavLink to="/Autism" className="block px-4 py-2 border hover:bg-blue-100">Autism</NavLink>
+              <NavLink to="/Adhd" className="block px-4 py-2 border hover:bg-blue-100">ADHD</NavLink>
+              <NavLink to="/Anger" className="block px-4 py-2 border hover:bg-blue-100">Anger Management</NavLink>
+              <NavLink to="/learning" className="block px-4 py-2 border hover:bg-blue-100">Learning Difficulties</NavLink>
+              <NavLink to="/behaviour" className="block px-4 py-2 border hover:bg-blue-100">Behaviour Problems</NavLink>
+              <NavLink to="/speech" className="block px-4 py-2 border hover:bg-blue-100">Speech Therapy</NavLink>
+              <NavLink to="/internet" className="block px-4 py-2 border hover:bg-blue-100">Internet & Gaming</NavLink>
+              <NavLink to="/school" className="block px-4 py-2 border hover:bg-blue-100">School Refusal</NavLink>
+              <NavLink to="/communication" className="block px-4 py-2 border hover:bg-blue-100">Communication Difficulty</NavLink>
+              <NavLink to="/exam" className="block px-4 py-2 border hover:bg-blue-100">Exam Stress</NavLink>
+              <NavLink to="/ocd" className="block px-4 py-2 border hover:bg-blue-100">OCD</NavLink>
+            </div>
+          </div>
+          <div className="group">
+            <NavLink to="/services" className="block px-4 py-2 hover:bg-blue-100">Services</NavLink>
+            <div className="pl-6">
+              <NavLink to="/services/therapy" className="block px-4 py-2 hover:bg-blue-100">Therapy</NavLink>
+              <NavLink to="/services/counseling" className="block px-4 py-2 hover:bg-blue-100">Counseling</NavLink>
+            </div>
+          </div>
+          <NavLink to="/contact" className="block px-4 py-2 hover:bg-blue-100">Contact</NavLink>
+          <div className="group">
+            <NavLink to="/branches" className="block px-4 py-2 hover:bg-blue-100">Our Branches</NavLink>
+            <div className="pl-6">
+              <NavLink to="/moga" className="block px-4 py-2 border hover:bg-blue-100">Moga</NavLink>
+              <NavLink to="/bathinda" className="block px-4 py-2 border hover:bg-blue-100">Bathinda</NavLink>
+              <NavLink to="/faridkot" className="block px-4 py-2 border hover:bg-blue-100">Faridkot</NavLink>
+            </div>
+          </div>
+        </nav>
+      )}
     </div>
   );
 };
